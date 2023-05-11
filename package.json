@@ -25,20 +25,27 @@
     }
   },
   "scripts": {
-    "test": "echo \"Happy hacking\" && 💙"
+    "prepack": "nyxr build",
+    "build": "unbuild",
+    "dev": "pnpm mkdist test/fixture -d",
+    "lint": "eslint --ext .ts . && prettier --check src test",
+    "mkdist": "dynot src/cli",
+    "release": "nyxr test && nyxlx changelogen --release && pnpm publish && git push --follow-tags",
+    "test": "nyxr lint && vitest run --coverage"
   },
   "dependencies": {
-    "nyxdefaults": "^0.0.3",
+    "dynot": "^0.1.8",
     "esbuild": "^0.17.18",
+    "esmnxuts": "^0.0.10",
     "fs-extra": "^11.1.1",
     "globby": "^13.1.4",
-    "dynot": "^0.1.8",
-    "esmnxuts": "^0.0.10",
     "mri": "^1.2.0",
+    "nyxdefaults": "^0.0.3",
     "nyxpath": "^0.0.4"
   },
   "devDependencies": {
     "@nyxb/eslint-config": "^0.0.53",
+    "@nyxb/nyxi": "^0.0.28",
     "@types/fs-extra": "^11.0.1",
     "@types/mri": "^1.1.1",
     "@types/node": "^18.16.3",
