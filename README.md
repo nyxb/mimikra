@@ -49,5 +49,5 @@ npx mimikra [rootDir] [--src=src] [--dist=dist] [--pattern=glob [--pattern=more-
 [license-href]: https://github.com/nyxblabs/mimikra/blob/main/LICENSE
 
 <!-- Cover -->
-[cover-src]: https://raw.githubusercontent.com/nyxblabs/mimikra/main/.github/assets/mimikra.png
+[cover-src]: https://raw.githubusercontent.com/nyxblabs/mimikra/24a4d5b32e3a7220413c0f9d4b50a4836ca2ee3a/.github/assets/cover-github-mimikra.png
 [cover-href]: https://💻nyxb.ws
