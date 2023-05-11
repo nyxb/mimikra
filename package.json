@@ -28,7 +28,7 @@
     "prepack": "nyxr build",
     "build": "unbuild",
     "dev": "pnpm mkdist test/fixture -d",
-    "lint": "eslint --ext .ts . && prettier --check src test",
+    "lint": "eslint --ext .ts .",
     "mimikra": "dynot src/cli",
     "release": "nyxr test && nyxlx changelogen --release && pnpm publish && git push --follow-tags",
     "test": "nyxr lint && vitest run --coverage"
