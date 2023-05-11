@@ -1,6 +1,12 @@
 {
     "extends": "@nyxb",
     "rules": {
-        "import/no-anonymous-default-export": 0
-    }
+        "import/no-anonymous-default-export": 0,
+        "@next/next/no-html-link-for-pages": 0
+    },
+    "settings": {
+        "react": {
+            "version": "16.0"
+        }
+}
 }
