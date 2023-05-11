@@ -1,0 +1,71 @@
+{
+  "name": "mimikra",
+  "version": "0.0.1",
+  "description": "🔄 Sleek data morphing tool from one file to another",
+  "author": "Dennis Ollhoff <contact@nyxb.xyz>",
+  "license": "MIT",
+  "hompage": "https://💻nyxb.ws",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyxblabs/mimikra.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nyxblabs/mimikra/issues"
+  },
+  "bin": {
+    "mimikra": "./dist/cli.cjs"
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Happy hacking\" && 💙"
+  },
+  "dependencies": {
+    "nyxdefaults": "^0.0.3",
+    "esbuild": "^0.17.18",
+    "fs-extra": "^11.1.1",
+    "globby": "^13.1.4",
+    "dynot": "^0.1.8",
+    "esmnxuts": "^0.0.10",
+    "mri": "^1.2.0",
+    "nyxpath": "^0.0.4"
+  },
+  "devDependencies": {
+    "@nyxb/eslint-config": "^0.0.53",
+    "@types/fs-extra": "^11.0.1",
+    "@types/mri": "^1.1.1",
+    "@types/node": "^18.16.3",
+    "@vitest/coverage-c8": "^0.30.1",
+    "c8": "latest",
+    "eslint": "^8.40.0",
+    "modern-normalize": "^1.1.0",
+    "sass": "^1.62.1",
+    "typescript": "^5.0.4",
+    "unbuild": "^1.2.1",
+    "vitest": "^0.30.1"
+  },
+  "peerDependencies": {
+    "sass": "^1.62.1",
+    "typescript": ">=5.0.4"
+  },
+  "peerDependenciesMeta": {
+    "sass": {
+      "optional": true
+    },
+    "typescript": {
+      "optional": true
+    }
+  },
+  "packageManager": "pnpm@8.5.0",
+  "files": [
+    "dist"
+  ],
+  "keywords": []
+}
