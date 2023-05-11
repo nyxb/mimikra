@@ -1,4 +1,4 @@
 // eslint-disable-next-line import/export
-export * from "./other";
+export * from './other'
 // eslint-disable-next-line import/export
-export type { Other } from "./other";
+export type { Other } from './other'
