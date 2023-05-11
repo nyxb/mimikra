@@ -107,10 +107,10 @@ describe('mimikra', () => {
 
       expect(await readFile(resolve(rootDir, 'dist/star/index.d.ts'), 'utf8'))
          .toMatchInlineSnapshot(`
-      "export * from \\"./other.js\\";
-      export type { Other } from \\"./other.js\\";
-      "
-    `)
+           "export * from './other.js';
+           export type { Other } from './other.js';
+           "
+         `)
       expect(
          await readFile(resolve(rootDir, 'dist/bar/esm.d.mts'), 'utf8'),
       ).toMatch('declare')
