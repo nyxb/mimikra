@@ -14,7 +14,7 @@
 
 ⚡ Swift and lean transformation by esbuild
 
-📄 .d.ts creation for .ts, .js, and .vue files
+📄 .d.ts creation for .ts, .js, tsx, jsx and .vue files
 
 ## ❓ Rationale 🤔
 

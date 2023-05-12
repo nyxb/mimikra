@@ -8,7 +8,7 @@ const CM_LETTER_RE = /(?<=\.)(c|m)(?=[jt]s$)/
 
 export const jsLoader: Loader = async (input, { options }) => {
    if (
-      !['.ts', '.js', '.cjs', '.mjs'].includes(input.extension)
+      !['.ts', '.js', '.cjs', '.mjs', '.jsx', '.tsx'].includes(input.extension)
     || DECLARATION_RE.test(input.path)
    )
       return
@@ -31,13 +31,19 @@ export const jsLoader: Loader = async (input, { options }) => {
    }
 
    // typescript => js
-   if (input.extension === '.ts')
-      contents = await transform(contents, { loader: 'ts' }).then(r => r.code)
+   if (['.ts', '.tsx'].includes(input.extension)) {
+      const loader = input.extension === '.tsx' ? 'tsx' : 'ts'
+      contents = await transform(contents, { loader }).then(r => r.code)
+   }
+
+   // jsx => js
+   if (input.extension === '.jsx')
+      contents = await transform(contents, { loader: 'jsx' }).then(r => r.code)
 
    // esm => cjs
    const isCjs = options.format === 'cjs'
    if (isCjs) {
-      contents = dynot()
+      contents = dynot(input.path)
          .transform({ source: contents, retainLines: false })
          .replace(/^exports.default = /gm, 'module.exports = ')
    }
