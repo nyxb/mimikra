@@ -1,6 +1,6 @@
 {
   "name": "mimikra",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "🔄 Sleek data morphing tool from one file to another",
   "author": "Dennis Ollhoff <contact@nyxb.xyz>",
   "license": "MIT",
@@ -27,11 +27,11 @@
   "scripts": {
     "prepack": "nyxr build",
     "build": "unbuild",
-    "dev": "pnpm mkdist test/fixture -d",
+    "dev": "nyxr mimikra test/fixture -d",
     "lint": "eslint --ext .ts .",
     "mimikra": "dynot src/cli",
     "release": "nyxr test && nyxlx changelogen --release && pnpm publish && git push --follow-tags",
-    "test": "nyxr lint && vitest run --coverage"
+    "test": "nyxr lint && vitest run --coverage -u"
   },
   "dependencies": {
     "dynot": "^0.1.8",
@@ -49,10 +49,13 @@
     "@types/fs-extra": "^11.0.1",
     "@types/mri": "^1.1.1",
     "@types/node": "^18.16.3",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
     "@vitest/coverage-c8": "^0.30.1",
     "c8": "latest",
     "eslint": "^8.40.0",
     "modern-normalize": "^1.1.0",
+    "react": "^18.2.0",
     "sass": "^1.62.1",
     "typescript": "^5.0.4",
     "unbuild": "^1.2.1",
