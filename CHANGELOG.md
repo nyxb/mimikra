@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.0.4
+
+[compare changes](https://github.com/nyxblabs/mimikra/compare/v0.0.3...v0.0.4)
+
+
+### 🚀 Enhancements
+
+  - **README.md): add support for .jsx and .tsx files in .d.ts creation 🐛 fix(js.ts): add support for .jsx and .tsx files in jsLoader 🧪 test(jsx-tsx.test.ts:** Add tests for .jsx and .tsx files in jsLoader The changes add support for .jsx and .tsx files in the jsLoader and .d.ts creation. The jsLoader now supports .jsx and .tsx files, and the .d.ts creation now includes .jsx and .tsx files. The tests have been added to ensure that the jsLoader works correctly with .jsx and .tsx files. ([72927ba](https://github.com/nyxblabs/mimikra/commit/72927ba))
+
+### ❤️  Contributors
+
+- Nyxb <contact@nyxb.xyz>
+
 ## v0.0.3
 
 [compare changes](https://github.com/nyxblabs/mimikra/compare/v0.0.2...v0.0.3)
